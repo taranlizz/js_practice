@@ -10,7 +10,7 @@ const parseInlineFormatting = (markdown) => {
     .replace(italicsRegex, "<em>$1</em>");
 };
 
-const parseParaghraphs = (markdown) => {
+const parseParagraphs = (markdown) => {
   return markdown.replace(paragraphRegex, (match) => {
     return `<p>${match}</p>`;
   });
