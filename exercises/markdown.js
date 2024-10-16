@@ -4,51 +4,37 @@ const boldRegex = /__(.*)__/gm;
 const italicsRegex = /_(.*)_/gm;
 const ulRegex = /^\*\s+(.+)$/gm;
 
-const parseParagraph = (markdown) => {
+const parseInlineFormatting = (markdown) => {
   return markdown
-    .replace(paragraphRegex, (match) => {
-      return `<p>${match}</p>`;
-    })
     .replace(boldRegex, "<strong>$1</strong>")
     .replace(italicsRegex, "<em>$1</em>");
 };
 
-const parseHeader = (markdown) => {
+const parseParaghraphs = (markdown) => {
+  return markdown.replace(paragraphRegex, (match) => {
+    return `<p>${match}</p>`;
+  });
+};
+
+const parseHeaders = (markdown) => {
   return markdown.replace(headerRegex, (match, hashes, content) => {
     const level = hashes.length;
     return `<h${level}>${content}</h${level}>`;
   });
 };
 
-const parseList = (markdown) => {
-  if (markdown.match(ulRegex)) {
-    const parsed = markdown.replaceAll(ulRegex, `<li>$1</li>`);
-
-    const firstLi = parsed.indexOf("<li>");
-    const lastLi = parsed.lastIndexOf("</li>") + 5;
-
-    const listItems = parsed.slice(firstLi, lastLi);
-
-    return (
-      parsed.slice(0, firstLi) + `<ul>${listItems}</ul>` + parsed.slice(lastLi)
-    );
-  } else {
-    return markdown;
-  }
+const parseLists = (markdown) => {
+  return markdown
+    .replace(ulRegex, "<li>$1</li>")
+    .replace(/<li>.*<\/li>/gms, (match) => `<ul>${match}</ul>`);
 };
 
 const eliminateNewLineChar = (markdown) => {
   return markdown.replace(/\n/g, "");
 };
 
-const parse = (markdown) => {
-  let result = markdown;
-
-  result = parseParagraph(result);
-  result = parseHeader(result);
-  result = parseList(result);
-
-  result = eliminateNewLineChar(result);
-
-  return result;
+export const parse = (markdown) => {
+  return eliminateNewLineChar(
+    parseLists(parseHeaders(parseParaghraphs(parseInlineFormatting(markdown))))
+  );
 };
