@@ -1,0 +1,49 @@
+/* vars */
+:root {
+  --mainTextClr: #131316;
+  --secondTextClr: #494a4d;
+  --mainLightTextClr: #ffffff;
+  --mainBgClr: #ffffff;
+  --secondBgClr: #131316;
+  --accentClr: #4891ff;
+}
+
+/* body */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background-color: var(--mainBgClr);
+  color: var(--mainTextClr);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* general */
+.container {
+  width: 1278px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
