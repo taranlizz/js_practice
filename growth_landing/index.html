@@ -40,30 +40,53 @@
             </li>
           </ul>
         </nav>
-        <button class="header-btn" type="button">Log in</button>
+        <button class="header-btn secondary-btn" type="button">Log in</button>
       </div>
     </header>
     <main>
       <!-- HERO SECTION -->
-      <section>
-        <div class="container">
-          <h1 class="hero-header">
+      <section class="hero-section">
+        <div class="container hero-container">
+          <h1 class="hero-title">
             A powerful solution to grow your startup. Fast!
           </h1>
-          <p>
+          <p class="hero-text">
             Organise, collaborate, and track progress seamlessly with our
             one-stop-shop startup growth tool.
           </p>
-          <button type="button">Get started</button>
-          <button type="button">Book a demo</button>
+          <div class="header-btn-wrapper">
+            <button class="hero-start-btn primary-btn btn" type="button">
+              Get started
+            </button>
+            <button class="hero-book-btn secondary-btn btn" type="button">
+              <svg class="hero-icon">
+                <use href="./images/sprite.svg#icon-webcam"></use>
+              </svg>
+              Book a demo
+            </button>
+          </div>
           <img src="./images/hero.png"/ alt="services">
         </div>
       </section>
-      <!-- VIDEO SECTION -->
-      <section>
-        <div class="container">
-          <h2>See how it works and get started in less than 2 minutes</h2>
-          <img src="./images/video.jpg" alt="video-preview" />
+      <!-- PLAYER SECTION -->
+      <section class="player-section">
+        <div class="container player-container">
+          <h2 class="player-title">
+            See how it works and get started in less than 2 minutes
+          </h2>
+          <img
+            class="player-img"
+            src="./images/video.jpg"
+            alt="video-preview"
+          />
+          <button class="player-controller">
+            <svg class="player-controller-icon">
+              <use href="./images/sprite.svg#icon-play"></use>
+            </svg>
+          </button>
+          <button type="button" class="demo-btn primary-btn btn">
+            Get started
+          </button>
         </div>
       </section>
       <!-- TESTIMONIALS SECTION -->
@@ -98,5 +121,6 @@
       </section>
     </main>
     <footer><div class="container"></div></footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>

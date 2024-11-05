@@ -1,0 +1,34 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-linkedin" viewBox="0 0 34 32">
+<path fill="#bcc2c3" style="fill: var(--color1, #bcc2c3)" d="M-0 3.718c0-1.077 0.382-1.966 1.145-2.667s1.755-1.050 2.976-1.050c1.199 0 2.169 0.345 2.911 1.034 0.763 0.711 1.145 1.638 1.145 2.78 0 1.034-0.371 1.896-1.112 2.586-0.763 0.711-1.766 1.067-3.009 1.067h-0.033c-1.199 0-2.169-0.356-2.911-1.067s-1.112-1.605-1.112-2.683zM0.425 32v-21.592h7.261v21.592h-7.261zM11.708 32h7.261v-12.056c0-0.754 0.087-1.336 0.262-1.745 0.305-0.733 0.769-1.352 1.39-1.859s1.401-0.76 2.338-0.76c2.442 0 3.663 1.627 3.663 4.881v11.539h7.26v-12.38c0-3.189-0.763-5.608-2.289-7.257s-3.543-2.473-6.050-2.473c-2.813 0-5.004 1.196-6.574 3.588v0.065h-0.033l0.033-0.065v-3.071h-7.261c0.044 0.69 0.065 2.834 0.065 6.432s-0.022 8.652-0.065 15.16z"></path>
+</symbol>
+<symbol id="icon-twitter" viewBox="0 0 32 32">
+<path fill="#bcc2c3" style="fill: var(--color1, #bcc2c3)" d="M32 6.080c-1.203 0.522-2.475 0.867-3.776 1.024 1.373-0.82 2.402-2.111 2.896-3.632-1.29 0.768-2.703 1.309-4.176 1.6-0.985-1.068-2.296-1.779-3.728-2.021s-2.904-0.002-4.186 0.682c-1.281 0.685-2.299 1.775-2.894 3.1s-0.733 2.811-0.392 4.223c-2.609-0.132-5.161-0.811-7.49-1.994s-4.384-2.842-6.030-4.87c-0.577 1.008-0.881 2.15-0.88 3.312-0.002 1.079 0.263 2.142 0.771 3.094s1.244 1.763 2.141 2.362c-1.043-0.028-2.064-0.308-2.976-0.816v0.080c0.008 1.512 0.538 2.975 1.5 4.141s2.298 1.964 3.78 2.259c-0.571 0.174-1.163 0.265-1.76 0.272-0.413-0.005-0.825-0.042-1.232-0.112 0.422 1.3 1.239 2.437 2.338 3.252s2.423 1.266 3.79 1.292c-2.308 1.816-5.159 2.808-8.096 2.816-0.535 0.002-1.069-0.030-1.6-0.096 2.999 1.936 6.494 2.964 10.064 2.96 2.463 0.026 4.907-0.44 7.189-1.369s4.355-2.304 6.099-4.044 3.124-3.81 4.060-6.089c0.935-2.279 1.407-4.722 1.388-7.185 0-0.272 0-0.56 0-0.848 1.256-0.936 2.338-2.084 3.2-3.392z"></path>
+</symbol>
+<symbol id="icon-plus" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="3.0476" d="M30.933 15.467h-30.933"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="3.0476" d="M15.464 30.933v-30.933"></path>
+</symbol>
+<symbol id="icon-cancel" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="2.1333" d="M23.814 8.505l-15.311 15.311"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="2.1333" d="M23.814 23.815l-15.311-15.311"></path>
+</symbol>
+<symbol id="icon-arrow-down" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="4" d="M16 1.818v26.364"></path>
+<path stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4" d="M4.545 16.724l11.455 11.455 11.455-11.455"></path>
+</symbol>
+<symbol id="icon-arrow-down-wh" viewBox="0 0 32 32">
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="3" d="M30 7l-17.92 16.8-10.080-9.264"></path>
+</symbol>
+<symbol id="icon-okay" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" stroke-width="3" d="M30 7l-17.92 16.8-10.080-9.264"></path>
+</symbol>
+<symbol id="icon-webcam" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12s-5.373 12-12 12zM10 16c0-3.314 2.686-6 6-6s6 2.686 6 6c0 3.314-2.686 6-6 6s-6-2.686-6-6z"></path>
+</symbol>
+<symbol id="icon-play" viewBox="0 0 32 32">
+<path d="M5.38 30.708c-0.888 0.561-2.045-0.077-2.045-1.127v-27.162c0-1.050 1.158-1.688 2.045-1.127l21.503 13.581c0.828 0.523 0.828 1.731 0 2.255l-21.503 13.581z"></path>
+</symbol>
+</defs>
+</svg>
