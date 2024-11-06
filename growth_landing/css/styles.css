@@ -12,6 +12,7 @@
   --secondaryBtnHov: #4891ff;
   --secondaryBtnTextHov: #ffffff;
   --linkHover: #1570f9;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* body */
@@ -61,16 +62,18 @@ button {
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--secondaryBtnClr);
+  padding: 16px 32px;
   border: none;
-  border-radius: 12px;
+  border-radius: 16px;
   font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .primary-btn {
   background-color: var(--primaryBtnClr);
   color: var(--primaryBtnText);
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .primary-btn:hover,
@@ -80,6 +83,7 @@ button {
 
 .secondary-btn {
   background-color: var(--secondaryBtnClr);
+  transition: background-color var(--transition);
 }
 
 .secondary-btn:hover,
@@ -133,6 +137,7 @@ button {
 .header-link {
   font-weight: 500;
   line-height: 1.5;
+  transition: color var(--transition);
 }
 
 .header-link:hover {
@@ -153,6 +158,11 @@ button {
   padding: 72px 0;
 }
 
+.hero-container {
+  position: relative;
+  min-height: 653px;
+}
+
 .hero-title {
   margin-bottom: 24px;
   width: 824px;
@@ -167,11 +177,13 @@ button {
   margin-bottom: 40px;
   width: 611px;
   font-size: 20px;
+  line-height: 1.6;
 }
 
 .header-btn-wrapper {
   display: inline-flex;
   gap: 16px;
+  margin-bottom: 50px;
 }
 
 .hero-book-btn {
@@ -186,11 +198,21 @@ button {
   fill: currentColor;
 }
 
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
 /* demo */
 
 .player-section {
   background-color: var(--secondBgClr);
   padding: 96px 0;
+}
+
+.player-container {
+  text-align: center;
 }
 
 .player-title {
@@ -204,27 +226,46 @@ button {
   text-align: center;
 }
 
-.player-img {
+.player-box {
+  min-height: 486px;
   margin: 0 auto 64px;
+  position: relative;
+  text-align: center;
+}
+
+.player-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player-controller-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .player-controller {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: inline;
+
   width: 80px;
   height: 80px;
+
   background-color: #ffffff;
+  background-image: url(../images/play.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 19px 24px;
+
   border-radius: 50%;
   border: none;
+
+  transition: transform var(--transition), background-size var(--transition);
 }
 
-.player-controller-icon {
-  width: 20px;
-  height: 24px;
-}
-
-.demo-btn {
-  display: block;
-  margin: 0 auto;
+.player-controller:hover {
+  transform: scale(1.2);
+  background-size: 23px 29px;
 }

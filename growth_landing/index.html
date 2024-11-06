@@ -65,7 +65,8 @@
               Book a demo
             </button>
           </div>
-          <img src="./images/hero.png"/ alt="services">
+          <img class="hero-image" src="./images/hero.png"/ alt="services"
+          width="1239" height="480">
         </div>
       </section>
       <!-- PLAYER SECTION -->
@@ -74,16 +75,18 @@
           <h2 class="player-title">
             See how it works and get started in less than 2 minutes
           </h2>
-          <img
-            class="player-img"
-            src="./images/video.jpg"
-            alt="video-preview"
-          />
-          <button class="player-controller">
-            <svg class="player-controller-icon">
-              <use href="./images/sprite.svg#icon-play"></use>
-            </svg>
-          </button>
+          <div class="player-box">
+            <img
+              class="player-img"
+              src="./images/video.jpg"
+              alt="video-preview"
+              width="835"
+              height="486"
+            />
+            <div class="player-controller-box">
+              <button type="button" class="player-controller"></button>
+            </div>
+          </div>
           <button type="button" class="demo-btn primary-btn btn">
             Get started
           </button>
