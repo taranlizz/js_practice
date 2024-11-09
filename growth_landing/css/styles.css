@@ -562,13 +562,16 @@ button {
 
 .questions-list {
   width: 824px;
+  margin: 0 auto;
 }
 
 .question-item {
   position: relative;
   overflow: hidden;
   padding-bottom: 24px;
-  border-bottom: 1px solid #131316;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dfdee2;
+  transition: padding var(--transition);
 }
 
 .question-title {
@@ -592,9 +595,12 @@ button {
   height: 20px;
   border: none;
   background-color: transparent;
-  background-image: url(../images/cancel.svg);
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--mainTextClr);
+}
+
+.question-item:hover {
+  padding-bottom: 48px;
+  border-bottom-color: #131316;
 }
 
 .question-item:hover .question-answer {
@@ -606,4 +612,16 @@ button {
   transform: translateY(0);
   opacity: 100;
   transition: transform var(--transition), opacity var(--transition) 100ms;
+}
+
+.question-btn-icon {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  transition: transform var(--transition);
+  fill: currentColor;
+}
+
+.question-btn:hover .question-btn-icon {
+  transform: rotate(90deg);
 }
