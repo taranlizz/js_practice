@@ -272,8 +272,21 @@ button {
 
 /* testimonials */
 .testimonials-section {
+  position: relative;
   padding: 96px 0;
   background-color: var(--secondBgClr);
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  height: 1px;
+  width: 1265px;
+  background-color: #494949;
+  transform: translateX(-50%);
 }
 
 .testimonials-title {
@@ -491,4 +504,106 @@ button {
 
 .pricing-link:hover .pricing-link-icon {
   transform: rotate(-90deg);
+}
+
+/* FAQ */
+
+.faq-section {
+  margin-bottom: 96px;
+}
+
+.faq-container {
+  padding-top: 13px;
+  border-top: 1px solid #e9e9ec;
+}
+
+.faq-title {
+  margin-bottom: 41px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -3px;
+  text-align: center;
+}
+
+.faq-button-list {
+  margin: 0 auto 111px;
+  padding: 8px 13px 8px 8px;
+  background-color: #f4f4f6;
+  border-radius: 8px;
+  width: 383px;
+  font-size: 0;
+}
+
+.faq-filter-btn {
+  padding: 12px 24px;
+  background-color: #f4f4f6;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: inherit;
+  border: none;
+  border-radius: 8px;
+  transition: background-color var(--transition);
+}
+
+.faq-filter-btn:not(:last-child) {
+  margin-right: 8px;
+}
+
+.faq-filter-btn:not(.filter-btn-active):hover {
+  background-color: #dbe7f9;
+}
+
+.filter-btn-active {
+  background-color: var(--primaryBtnClr);
+  color: var(--primaryBtnText);
+}
+
+.questions-list {
+  width: 824px;
+}
+
+.question-item {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #131316;
+}
+
+.question-title {
+  width: 742px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.question-answer {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-150%);
+}
+
+.question-btn {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../images/cancel.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.question-item:hover .question-answer {
+  position: static;
+  margin-top: 16px;
+  line-height: 1.6;
+  color: #494a4d;
+  width: 718px;
+  transform: translateY(0);
+  opacity: 100;
+  transition: transform var(--transition), opacity var(--transition) 100ms;
 }
