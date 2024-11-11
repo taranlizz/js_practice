@@ -27,7 +27,7 @@
     <header class="header">
       <div class="container header-container">
         <nav class="header-nav">
-          <a class="header-logo" href="./index.html">Growth</a>
+          <a class="header-logo logo" href="./index.html">Growth</a>
           <ul class="header-list">
             <li class="header-item">
               <a class="header-link" href="#" target="_blank">Features</a>
@@ -319,7 +319,129 @@
         </div>
       </section>
     </main>
-    <footer><div class="container"></div></footer>
+    <footer class="footer"
+      ><div class="container footer-container">
+        <a href="./index.html" class="logo footer-logo">Growth</a>
+        <div class="footer-wrapper">
+          <form class="footer-form">
+            <label for="footer-form-email" class="footer-form-label"
+              >Subscribe to newsletter</label
+            >
+            <p class="footer-form-text"
+              >Subscribe now to receive tips on how to take your business to the
+              next level.</p
+            >
+            <div class="footer-form-wrapper">
+              <input
+                type="email"
+                name="email"
+                id="footer-form-email"
+                class="footer-form-input"
+                placeholder="Enter your email"
+                required
+              />
+              <button type="submit" class="primary-btn btn footer-form-btn"
+                >Subscribe</button
+              >
+            </div>
+          </form>
+          <nav class="footer-nav">
+            <div class="footer-nav-wrapper">
+              <h2 class="footer-nav-title">Company</h2>
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item"
+                  ><a href="#" class="footer-nav-link">About</a></li
+                >
+                <li class="footer-nav-item"
+                  ><a href="#" class="footer-nav-link">Our process</a></li
+                >
+                <li class="footer-nav-item"
+                  ><a href="#" class="footer-nav-link">Join our team</a></li
+                >
+              </ul>
+            </div>
+            <div class="footer-nav-wrapper">
+              <h2 class="footer-nav-title">Resources</h2>
+              <ul class="footer-nav-list">
+                <li class="footer-nav-item"
+                  ><a href="#" class="footer-nav-link">News</a></li
+                >
+                <li class="footer-nav-item"
+                  ><a href="#" class="footer-nav-link">Research</a></li
+                >
+                <li class="footer-nav-item"
+                  ><a href="#" class="footer-nav-link">Recent projects</a></li
+                >
+              </ul>
+            </div>
+          </nav>
+          <address class="footer-address">
+            <p class="address-title">Contacts</p>
+            <a class="address-mail-link" href="mailto:hello@growthapp.com"
+              >hello@growthapp.com</a
+            >
+          </address>
+        </div>
+        <div class="footer-media-wrapper">
+          <a
+            href="https://www.linkedin.com/"
+            class="footer-soc-link"
+            target="_blank"
+            noreferrer
+            noopener
+            nofollow
+            ><svg class="footer-soc-icon">
+              <use href="./images/sprite.svg#icon-linkedin"></use></svg
+          ></a>
+          <a
+            href="https://x.com/"
+            target="_blank"
+            class="footer-soc-link"
+            noreferrer
+            noopener
+            nofollow
+            ><svg class="footer-soc-icon">
+              <use href="./images/sprite.svg#icon-x"></use></svg
+          ></a>
+        </div>
+        <p class="footer-copyright">&copy 2023 Growth. All rights reserved</p>
+      </div></footer
+    >
+    <!-- <div class="backdrop is-hidden"
+      ><div class="modal">
+        <button type="button" class="modal-close-btn">
+          <svg class="modal-btn-icon">
+            <use href="./images/sprite.svg#icon-close"></use></svg
+        ></button>
+        <p class="modal-title">Log in</p>
+        <p class="modal-text">to get started</p>
+        <form class="modal-form" autocomplete="off">
+          <label class="modal-form-label" for="modal-form-email">Email</label>
+          <input
+            class="modal-form-input"
+            type="email"
+            name="email"
+            id="modal-form-email"
+            autofocus
+            required
+          />
+          <label class="modal-form-label" for="modal-form-password"
+            >Password</label
+          >
+          <input
+            class="modal-form-input"
+            type="password"
+            name="password"
+            id="modal-form-password"
+            required
+            min="8"
+          />
+          <button type="submit" class="btn primary-btn modal-submit-btn"
+            >Continue</button
+          >
+        </form>
+      </div></div
+    > -->
     <script src="./js/index.js"></script>
   </body>
 </html>
