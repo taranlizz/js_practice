@@ -541,6 +541,9 @@ address {
 }
 
 .faq-button-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
   margin: 0 auto 111px;
   padding: 8px 13px 8px 8px;
   background-color: #f4f4f6;
@@ -565,11 +568,11 @@ address {
   margin-right: 8px;
 }
 
-.faq-filter-btn:not(.filter-btn-active):hover {
+.faq-filter-btn:hover {
   background-color: #dbe7f9;
 }
 
-.filter-btn-active {
+.faq-filter-btn:focus {
   background-color: var(--primaryBtnClr);
   color: var(--primaryBtnText);
 }
@@ -612,12 +615,12 @@ address {
   color: var(--mainTextClr);
 }
 
-.question-item:hover {
+.question-item.expanded {
   padding-bottom: 48px;
   border-bottom-color: #131316;
 }
 
-.question-item:hover .question-answer {
+.question-item.expanded .question-answer {
   position: static;
   margin-top: 16px;
   line-height: 1.6;
@@ -634,9 +637,10 @@ address {
   transform: rotate(-45deg);
   transition: transform var(--transition);
   fill: currentColor;
+  pointer-events: none;
 }
 
-.question-btn:hover .question-btn-icon {
+.question-item.expanded .question-btn-icon {
   transform: rotate(90deg);
 }
 

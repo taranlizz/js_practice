@@ -199,8 +199,9 @@
           </p>
           <a class="pricing-link" href="#" target="_blank"
             >View features<svg class="pricing-link-icon">
-              <use href="./images/sprite.svg#icon-arrow-down"></use></svg
-          ></a>
+              <use href="./images/sprite.svg#icon-arrow-down"></use>
+            </svg>
+          </a>
         </div>
       </section>
       <!-- FAQ SECTIONS -->
@@ -208,24 +209,27 @@
         <div class="container faq-container"
           ><h2 class="faq-title">Frequently asked questions</h2>
           <ul class="faq-button-list">
-            <button
-              type="button"
-              class="faq-filter-btn filter-btn-active"
-              data-filter="all"
-              >All</button
+            <li class="faq-btn-item">
+              <button type="button" class="faq-filter-btn" data-filter="all"
+                >All</button
+              ></li
             >
-            <button
-              type="button"
-              class="faq-filter-btn"
-              data-filter="getting started"
-              >Getting started</button
-            >
-            <button type="button" class="faq-filter-btn" data-filter="pricing"
-              >Pricing</button
-            >
+            <li class="faq-btn-item">
+              <button
+                type="button"
+                class="faq-filter-btn"
+                data-filter="getting started"
+                >Getting started</button
+              >
+            </li>
+            <li class="faq-btn-item">
+              <button type="button" class="faq-filter-btn" data-filter="pricing"
+                >Pricing</button
+              >
+            </li>
           </ul>
           <ul class="questions-list">
-            <li class="question-item">
+            <li class="question-item" data-category="getting started">
               <p class="question-title"
                 >How does the contact management feature help me keep track of
                 clients and partners?</p
@@ -234,12 +238,13 @@
                 >Keep track of your contacts, gain valuable insights, analyse
                 live data and performance metrics.</p
               >
-              <button type="button" class="question-btn">
+              <button type="button" class="question-btn" data-expand>
                 <svg class="question-btn-icon">
-                  <use href="./images/sprite.svg#icon-close"></use></svg
-              ></button>
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
             </li>
-            <li class="question-item">
+            <li class="question-item" data-category="getting started">
               <p class="question-title"
                 >Can I customize the dashboards and reporting feature to display
                 the metrics that are most important to my business?</p
@@ -250,12 +255,13 @@
                 display of data, giving you insights tailored to your specific
                 business needs.</p
               >
-              <button type="button" class="question-btn">
+              <button type="button" class="question-btn" data-expand>
                 <svg class="question-btn-icon">
-                  <use href="./images/sprite.svg#icon-close"></use></svg
-              ></button>
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
             </li>
-            <li class="question-item">
+            <li class="question-item" data-category="getting started">
               <p class="question-title"
                 >How does the task management feature help me delegate tasks to
                 my team and track progress?</p
@@ -266,12 +272,13 @@
                 This helps ensure that everyone stays on schedule and that tasks
                 are completed efficiently.</p
               >
-              <button type="button" class="question-btn">
+              <button type="button" class="question-btn" data-expand>
                 <svg class="question-btn-icon">
-                  <use href="./images/sprite.svg#icon-close"></use></svg
-              ></button>
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
             </li>
-            <li class="question-item">
+            <li class="question-item" data-category="pricing">
               <p class="question-title"
                 >Can I collaborate with my team in real-time using all tools?</p
               >
@@ -281,12 +288,13 @@
                 assign tasks, and monitor progress, making team collaboration
                 efficient and easy.</p
               >
-              <button type="button" class="question-btn">
+              <button type="button" class="question-btn" data-expand>
                 <svg class="question-btn-icon">
-                  <use href="./images/sprite.svg#icon-close"></use></svg
-              ></button>
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
             </li>
-            <li class="question-item">
+            <li class="question-item" data-category="pricing">
               <p class="question-title"
                 >How does the app help me stay compliant when working with
                 freelancers and contractors?</p
@@ -297,19 +305,20 @@
                 This ensures that you remain compliant with legal standards
                 while working with freelancers and contractors.</p
               >
-              <button type="button" class="question-btn">
+              <button type="button" class="question-btn" data-expand>
                 <svg class="question-btn-icon">
-                  <use href="./images/sprite.svg#icon-close"></use></svg
-              ></button>
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
             </li>
-            <li class="question-item">
+            <li class="question-item" data-category="pricing">
               <p class="question-title">Is the app available on all devices?</p>
               <p class="question-answer"
                 >The app is accessible on multiple devices, including desktop,
                 tablet, and mobile, ensuring you can stay connected and manage
                 tasks from anywhere.</p
               >
-              <button type="button" class="question-btn">
+              <button type="button" class="question-btn" data-expand>
                 <svg class="question-btn-icon">
                   <use href="./images/sprite.svg#icon-close"></use>
                 </svg>
@@ -387,61 +396,25 @@
             href="https://www.linkedin.com/"
             class="footer-soc-link"
             target="_blank"
-            noreferrer
-            noopener
-            nofollow
+            rel="noreferrer noopener nofollow"
             ><svg class="footer-soc-icon">
-              <use href="./images/sprite.svg#icon-linkedin"></use></svg
-          ></a>
+              <use href="./images/sprite.svg#icon-linkedin"></use>
+            </svg>
+          </a>
           <a
             href="https://x.com/"
             target="_blank"
             class="footer-soc-link"
-            noreferrer
-            noopener
-            nofollow
+            rel="noreferrer noopener nofollow"
             ><svg class="footer-soc-icon">
-              <use href="./images/sprite.svg#icon-x"></use></svg
-          ></a>
+              <use href="./images/sprite.svg#icon-x"></use>
+            </svg>
+          </a>
         </div>
-        <p class="footer-copyright">&copy 2023 Growth. All rights reserved</p>
+        <p class="footer-copyright">&copy; 2023 Growth. All rights reserved</p>
       </div></footer
     >
-    <!-- <div class="backdrop is-hidden"
-      ><div class="modal">
-        <button type="button" class="modal-close-btn">
-          <svg class="modal-btn-icon">
-            <use href="./images/sprite.svg#icon-close"></use></svg
-        ></button>
-        <p class="modal-title">Log in</p>
-        <p class="modal-text">to get started</p>
-        <form class="modal-form" autocomplete="off">
-          <label class="modal-form-label" for="modal-form-email">Email</label>
-          <input
-            class="modal-form-input"
-            type="email"
-            name="email"
-            id="modal-form-email"
-            autofocus
-            required
-          />
-          <label class="modal-form-label" for="modal-form-password"
-            >Password</label
-          >
-          <input
-            class="modal-form-input"
-            type="password"
-            name="password"
-            id="modal-form-password"
-            required
-            min="8"
-          />
-          <button type="submit" class="btn primary-btn modal-submit-btn"
-            >Continue</button
-          >
-        </form>
-      </div></div
-    > -->
-    <script src="./js/index.js"></script>
+    <script src="./js/filters.js" type="module"></script>
+    <script src="./js/expandQuestions.js" type="module"></script>
   </body>
 </html>
