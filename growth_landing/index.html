@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -40,7 +40,9 @@
             </li>
           </ul>
         </nav>
-        <button class="header-btn secondary-btn" type="button">Log in</button>
+        <button class="header-btn secondary-btn" type="button" data-modal-open
+          >Sign in</button
+        >
       </div>
     </header>
     <main>
@@ -414,7 +416,69 @@
         <p class="footer-copyright">&copy; 2023 Growth. All rights reserved</p>
       </div></footer
     >
-    <script src="./js/filters.js" type="module"></script>
-    <script src="./js/expandQuestions.js" type="module"></script>
+    <div class="modal-backdrop" data-modal>
+      <div class="modal-window">
+        <button type="button" class="modal-btn-close" data-modal-close>
+          <svg class="modal-btn-cls-icon">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-title">Sign in</h2>
+        <p class="modal-text">Please login to continue to your account.</p>
+        <form class="modal-form">
+          <div class="modal-input-wrapper">
+            <label class="modal-input-label" for="modal-email">Email</label>
+            <input class="modal-input" type="email" id="modal-email" />
+          </div>
+          <div class="modal-input-wrapper">
+            <label class="modal-input-label" for="modal-password"
+              >Password</label
+            >
+            <input
+              class="modal-input"
+              type="password"
+              id="modal-password"
+              data-password
+            />
+            <label class="password-checkbox-label" data-password-label>
+              <input
+                type="checkbox"
+                class="password-checkbox is-hidden"
+                data-password-show
+              />
+              <svg class="password-input-icon is-hidden">
+                <use href="./images/sprite.svg#icon-eye"></use>
+              </svg>
+              <svg class="password-input-icon off">
+                <use href="./images/sprite.svg#icon-eye-off"></use>
+              </svg>
+            </label>
+          </div>
+          <input
+            type="checkbox"
+            class="modal-checkbox is-hidden"
+            id="login-checkbox"
+          />
+          <label class="modal-checkbox-label" for="login-checkbox"
+            >Keep me logged in</label
+          >
+          <button class="modal-btn-submit btn primary-btn" type="submit"
+            >Sign in</button
+          >
+        </form>
+        <p class="modal-divider">or</p>
+        <button class="btn modal-btn-google" type="button"
+          >Continue with Google</button
+        >
+        <div class="modal-redirect-box">
+          <p class="modal-redirect-text">Need an account?</p>
+          <button class="modal-redirect-btn" type="button">Create one</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/filters.js"></script>
+    <script type="module" src="./js/expand.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/password.js"></script>
   </body>
 </html>
