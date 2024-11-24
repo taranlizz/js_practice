@@ -4,11 +4,8 @@ const passwordLabel = document.querySelector('[data-password-label]');
 
 function showPassword() {
   passwordInput.type = passwordShowChb.checked ? 'text' : 'password';
+  passwordLabel.children[1].classList.toggle('is-hidden');
+  passwordLabel.children[2].classList.toggle('is-hidden');
 }
 
-function onMouseDownLabel(e) {
-  e.preventDefault();
-}
-
-passwordLabel.addEventListener('mousedown', onMouseDownLabel);
 passwordShowChb.addEventListener('change', showPassword);

@@ -416,7 +416,7 @@
         <p class="footer-copyright">&copy; 2023 Growth. All rights reserved</p>
       </div></footer
     >
-    <div class="modal-backdrop" data-modal>
+    <div class="modal-backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button type="button" class="modal-btn-close" data-modal-close>
           <svg class="modal-btn-cls-icon">
@@ -428,7 +428,13 @@
         <form class="modal-form">
           <div class="modal-input-wrapper">
             <label class="modal-input-label" for="modal-email">Email</label>
-            <input class="modal-input" type="email" id="modal-email" />
+            <input
+              class="modal-input"
+              type="email"
+              id="modal-email"
+              placeholder=""
+              required
+            />
           </div>
           <div class="modal-input-wrapper">
             <label class="modal-input-label" for="modal-password"
@@ -438,6 +444,10 @@
               class="modal-input"
               type="password"
               id="modal-password"
+              min="8"
+              max="16"
+              placeholder=""
+              required
               data-password
             />
             <label class="password-checkbox-label" data-password-label>

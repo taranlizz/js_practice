@@ -845,33 +845,23 @@ address {
   transition: border var(--transition);
 }
 
-.modal-input:focus {
+.modal-input:focus,
+.modal-input:invalid:not(:placeholder-shown) {
   outline: none;
   border: 2px solid var(--accentClr);
 }
 
-.modal-input-label:has(+ .modal-input:focus) {
+.modal-input-label:has(+ .modal-input:focus),
+.modal-input-label:has(+ .modal-input:not(:placeholder-shown)) {
   transform: translateY(-115%);
   font-weight: 500;
   font-size: 14px;
-  color: var(--accentClr);
 }
 
-/* .password-show-btn {
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  right: 35px;
-  transform: translateY(-50%);
-  transition: color var(--transition);
-  color: #9a9a9a;
-  background-color: transparent;
-  border: none;
-} */
-
-/* .password-show-btn:focus {
-  color: #131316;
-} */
+.modal-input-label:has(+ .modal-input:focus),
+.modal-input-label:has(+ .modal-input:invalid:not(:placeholder-shown)) {
+  color: var(--accentClr);
+}
 
 .password-checkbox-label {
   position: absolute;
@@ -897,7 +887,7 @@ address {
 }
 
 .modal-checkbox-label {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
 }
 
@@ -998,80 +988,3 @@ address {
   background-color: transparent;
   border: none;
 }
-
-/* .backdrop {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  width: 500px;
-  min-height: 500px;
-  background-color: var(--mainBgClr);
-  border-radius: 8px;
-}
-
-.modal-close-btn {
-  display: block;
-  margin-left: auto;
-  padding: 0px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
-}
-
-.modal-btn-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.modal-title {
-  margin-bottom: 5px;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 1.2;
-}
-
-.modal-text {
-  font-size: 20px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.modal-form-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.modal-form-input {
-  display: block;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  width: 100%;
-  height: 50px;
-  font-size: 20px;
-  border: 1px solid #494949;
-  border-radius: 8px;
-}
-
-.modal-form-input:last-of-type {
-  margin-bottom: 40px;
-}
-
-.modal-form-input:focus {
-  outline: none;
-  border-color: var(--accentClr);
-}
-
-.modal-submit-btn {
-  width: 100%;
-} */
