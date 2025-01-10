@@ -35,6 +35,17 @@ button {
   cursor: pointer;
 }
 
+svg {
+  pointer-events: none;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
 .container {
   position: absolute;
   top: 50%;
@@ -110,11 +121,20 @@ button {
   color: #ff6600;
 }
 
-.entry-list {
-  margin-bottom: 16px;
+.empty-list-text {
+  font-size: 20px;
+  text-align: center;
+  margin: 16px 0;
 }
 
 /* ENTRY */
+
+.entry-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-bottom: 5px;
+  margin-bottom: 16px;
+}
 
 .entry-item {
   padding: 16px;
@@ -192,27 +212,107 @@ button {
 }
 
 /* ENTRY COMPLETED STATUS */
-.entry-item.completed {
+.entry-item[data-completed="true"] {
   background-color: #f1f1f1;
   color: #8a8a8a;
 }
 
-.entry-item.completed .entry-title,
-.entry-item.completed .entry-text {
+.entry-item[data-completed="true"] .entry-title,
+.entry-item[data-completed="true"] .entry-text {
   text-decoration: line-through;
 }
 
-.entry-item.completed .entry-tag {
+.entry-item[data-completed="true"] .entry-tag {
   color: #f1a471;
 }
 
-.entry-item.completed .entry-status-btn {
+.entry-item[data-completed="true"] .entry-status-btn {
   background-color: #f1a471;
 }
 
 /* ADD ENTRY BTN */
 
-.add-entry-btn-icon {
+.open-form-btn-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ADD ENTRY FORM */
+
+.add-entry-form {
+  padding-top: 16px;
+  border-top: 1px solid #999999;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.category-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.category-input-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.category-input-label:is(:hover, :focus) {
+  color: #ff6600;
+}
+
+.category-input-label:has(.category-input:checked) {
+  color: #ff6600;
+}
+
+.category-input {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.title-input,
+.text-input {
+  width: 100%;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+
+.title-input {
+  height: 32px;
+  margin-bottom: 12px;
+}
+
+.text-input {
+  height: 96px;
+  resize: none;
+  margin-bottom: 12px;
+}
+
+.form-btn-wrapper {
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+}
+
+.form-close-btn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+}
+
+.form-btn-icon {
   width: 24px;
   height: 24px;
 }

@@ -24,7 +24,7 @@
         <input class="input-search" type="text" />
         <button class="input-search-btn btn-icon" type="button">
           <svg class="input-search-icon">
-            <use xlink:href="/public/sprite.svg#icon-search"></use>
+            <use href="/public/sprite.svg#icon-search"></use>
           </svg>
         </button>
       </div>
@@ -39,76 +39,70 @@
           <button class="tag-btn" type="button">Фітнес</button>
         </li>
       </ul>
-      <ul class="entry-list">
-        <li class="entry-item">
-          <div class="entry-item-container">
-            <p class="entry-tag">Домашні справи</p>
-            <ul class="entry-controllers-list">
-              <li class="entry-controllers-item">
-                <button class="entry-controller-btn btn-icon" type="button">
-                  <svg class="controller-btn-icon">
-                    <use xlink:href="/public/sprite.svg#icon-edit"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="entry-controllers-item">
-                <button class="entry-controller-btn btn-icon" type="button">
-                  <svg class="controller-btn-icon">
-                    <use xlink:href="/public/sprite.svg#icon-delete"></use>
-                  </svg>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <h2 class="entry-title">Купити продукти</h2>
-          <p class="entry-text">
-            Скласти список необхідних продуктів та відвідати магазин.
-          </p>
-          <button class="entry-status-btn primary-btn" type="button">
-            <svg class="entry-status-btn-icon">
-              <use xlink:href="/public/sprite.svg#icon-save"></use>
-            </svg>
-            Завершити
-          </button>
-        </li>
-        <li class="entry-item completed">
-          <div class="entry-item-container">
-            <p class="entry-tag">Домашні справи</p>
-            <ul class="entry-controllers-list">
-              <li class="entry-controllers-item">
-                <button class="entry-controller-btn btn-icon" type="button">
-                  <svg class="controller-btn-icon">
-                    <use xlink:href="/public/sprite.svg#icon-edit"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="entry-controllers-item">
-                <button class="entry-controller-btn btn-icon" type="button">
-                  <svg class="controller-btn-icon">
-                    <use xlink:href="/public/sprite.svg#icon-delete"></use>
-                  </svg>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <h2 class="entry-title">Купити продукти</h2>
-          <p class="entry-text">
-            Скласти список необхідних продуктів та відвідати магазин.
-          </p>
-          <button class="entry-status-btn primary-btn" type="button">
-            <svg class="entry-status-btn-icon">
-              <use xlink:href="/public/sprite.svg#icon-save"></use>
-            </svg>
-            Відновити
-          </button>
-        </li>
-      </ul>
-      <button class="add-entry-btn primary-btn" type="button">
-        <svg class="add-entry-btn-icon">
-          <use xlink:href="/public/sprite.svg#icon-add"></use>
+      <ul class="entry-list" data-list></ul>
+      <button class="open-form-btn primary-btn" type="button" data-open>
+        <svg class="open-form-btn-icon">
+          <use href="/public/sprite.svg#icon-add"></use>
         </svg>
         Додати справу
       </button>
+      <form class="add-entry-form is-hidden" data-form>
+        <p class="input-label">Категорія</p>
+        <div class="category-input-group">
+          <label class="category-input-label">
+            <input
+              class="category-input"
+              type="radio"
+              name="category"
+              value="Домашні справи"
+              checked
+            />
+            Домашні справи
+          </label>
+          <label class="category-input-label">
+            <input
+              class="category-input"
+              type="radio"
+              name="category"
+              value="Робота"
+            />
+            Робота
+          </label>
+          <label class="category-input-label">
+            <input
+              class="category-input"
+              type="radio"
+              name="category"
+              value="Фітнес"
+            />
+            Фітнес
+          </label>
+        </div>
+        <label class="input-label" for="title">Заголовок</label>
+        <input
+          class="title-input"
+          id="title"
+          type="text"
+          name="title"
+          required
+        />
+        <label class="input-label" for="text">Примітка</label>
+        <textarea class="text-input" id="text" name="text"></textarea>
+        <div class="form-btn-wrapper">
+          <button class="form-close-btn" type="reset" data-close>
+            <svg class="form-close-icon form-btn-icon">
+              <use href="/public/sprite.svg#icon-close"></use>
+            </svg>
+            Скасувати
+          </button>
+          <button class="form-save-btn primary-btn" type="submit" data-save>
+            <svg class="form-save-btn-icon form-btn-icon">
+              <use href="/public/sprite.svg#icon-check"></use>
+            </svg>
+            Зберегти
+          </button>
+        </div>
+      </form>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>
