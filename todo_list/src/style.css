@@ -54,6 +54,7 @@ svg {
   width: 800px;
   padding: 24px;
   background-color: #e2e2e2;
+  min-height: 640px;
 }
 
 .btn-icon,
@@ -84,15 +85,10 @@ svg {
   border-radius: 4px;
 }
 
-.input-search-btn {
+.input-search-icon {
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 24px;
-  height: 24px;
-}
-
-.input-search-icon {
   width: 24px;
   height: 24px;
 }
@@ -103,9 +99,7 @@ svg {
   display: flex;
   gap: 10px;
   margin-bottom: 16px;
-}
-
-.tag-btns-item {
+  padding-left: 3px;
 }
 
 .tag-btn {
@@ -130,7 +124,7 @@ svg {
 /* ENTRY */
 
 .entry-list {
-  max-height: 400px;
+  height: 400px;
   overflow-y: auto;
   padding-bottom: 5px;
   margin-bottom: 16px;

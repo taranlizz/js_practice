@@ -15,28 +15,35 @@
       href="node_modules/modern-normalize/modern-normalize.css"
     />
     <link rel="stylesheet" href="/src/style.css" />
-    <title>Vite App</title>
+    <title>To-Do List</title>
   </head>
   <body>
     <main class="container">
       <h1 class="main-title">Список справ</h1>
       <div class="input-search-container">
-        <input class="input-search" type="text" />
-        <button class="input-search-btn btn-icon" type="button">
-          <svg class="input-search-icon">
-            <use href="/public/sprite.svg#icon-search"></use>
-          </svg>
-        </button>
+        <input class="input-search" type="text" data-search-input />
+        <svg class="input-search-icon">
+          <use href="/public/sprite.svg#icon-search"></use>
+        </svg>
       </div>
-      <ul class="tag-btns-list">
+      <ul class="tag-btns-list" data-filter-list>
         <li class="tag-btns-item">
-          <button class="tag-btn" type="button">Домашні справи</button>
+          <button class="tag-btn" type="button" data-filter="Всі">Всі</button>
         </li>
         <li class="tag-btns-item">
-          <button class="tag-btn" type="button">Робота</button>
+          <button class="tag-btn" type="button" data-filter="Домашні справи">
+            Домашні справи
+          </button>
         </li>
         <li class="tag-btns-item">
-          <button class="tag-btn" type="button">Фітнес</button>
+          <button class="tag-btn" type="button" data-filter="Робота">
+            Робота
+          </button>
+        </li>
+        <li class="tag-btns-item">
+          <button class="tag-btn" type="button" data-filter="Фітнес">
+            Фітнес
+          </button>
         </li>
       </ul>
       <ul class="entry-list" data-list></ul>
